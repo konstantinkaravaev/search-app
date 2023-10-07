@@ -1,0 +1,19 @@
+<div class="input-field">
+  <mat-form-field class="animate-placeholder">
+    <input
+      matInput
+      [(ngModel)]="query"
+      placeholder="Enter your search query"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    />
+  </mat-form-field>
+  <button
+    mat-button
+    (click)="submitQuery()"
+    [routerLink]="['/search']"
+    [disabled]="query.length < 3"
+  >
+    Search
+  </button>
+</div>

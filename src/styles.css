@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css (или styles.scss) */
+
+/* Общие стили для контейнеров */
+.input-field,
+.search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Выравнивание текста по центру */
+  height: 100vh; /* Высота на всю видимую область браузера */
+}
+
+/* Стили для поля ввода */
+mat-form-field {
+  margin-bottom: 20px;
+  width: 100%; /* Ширина 100% контейнера */
+}
+
+/* Стили для кнопки */
+button.mat-button {
+  width: 100%; /* Ширина 100% контейнера */
+  padding: 10px; /* Отступы */
+}
+
+/* Стили для заголовка */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Стили для текста результатов */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Медиа-запрос для компьютерной версии начиная с ширины 1024px */
+@media (min-width: 1024px) {
+  .input-field,
+  .search-result {
+    width: 300px; /* Задайте желаемую ширину */
+    padding: 20px; /* Отступы */
+    margin: 0 auto;
+  }
+  button.mat-button {
+    padding: 15px; /* Дополнительный отступ для кнопки */
+  }
+}
+
+/* Медиа-запрос для мобильной версии начиная с ширины 768px */
+@media (max-width: 768px) {
+  .input-field {
+    width: 100%; /* Ширина 100% экрана */
+    padding: 15px; /* Увеличенный отступ для поля ввода */
+  }
+  .search-result {
+    font-size: 15px; /* Уменьшенный размер шрифта для мобильной версии */
+  }
+}
